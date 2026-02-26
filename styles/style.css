@@ -78,8 +78,8 @@ ol {
 }
 
 .result__video {
-  width: 100%;      
-  height: 100%;     
+  width: 100%;
+  height: 100%;
   object-fit: fill;
 }
 
@@ -95,8 +95,8 @@ ol {
 
 .search-form__label {
   display: flex;
-  align-items: center; 
-  gap: 5px; 
+  align-items: center;
+  gap: 5px;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -149,14 +149,14 @@ ol {
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: '';
-  position: absolute; 
+  position: absolute;
   width: 15px;
   height: 15px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-} 
+}
 
 .search-form__submit-button {
   align-self: flex-end;
@@ -194,7 +194,6 @@ ol {
 
 .content__list-item {
   margin-bottom: 30px;
-  /* padding-left: 2px; */
 }
 
 .content__list-item *:focus-visible {
@@ -237,17 +236,17 @@ ol {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 195px; 
+  max-width: 195px;
   margin-top: -5px;
 }
 
 .content__video-card-description {
   display: -webkit-box;
-  max-width: 195px; 
+  max-width: 195px;
   line-height: 16.2px;
   padding-bottom: 1.8px;
-  margin-bottom: -1.8px; 
-  -webkit-line-clamp: 4; 
+  margin-bottom: -1.8px;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -275,7 +274,6 @@ ol {
   padding: 6px 0;
 }
 
-
 /* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
@@ -286,5 +284,5 @@ ol {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
 }
