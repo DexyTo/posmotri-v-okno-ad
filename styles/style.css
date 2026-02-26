@@ -9,6 +9,7 @@ html {
 }
 
 .page {
+  display: flex;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -16,6 +17,7 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  align-items: center;
 }
 
 h1,
@@ -36,6 +38,243 @@ ul,
 ol {
   list-style: none;
 }
+
+.button {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.button:focus-visible {
+  outline: 1px solid white;
+  outline-offset: 1px;
+}
+
+.button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.content {
+  inline-size: 1140px;
+  block-size: 534px;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: end;
+  gap: 30px;
+}
+
+.result__video-container {
+  position: relative;
+  inline-size: 711px;
+  margin-bottom: 16px;
+}
+
+.result__video {
+  width: 100%;      
+  height: 100%;     
+  object-fit: fill;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center; 
+  gap: 5px; 
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid white;
+  outline-offset: 1px;
+}
+
+.search-form__label:hover > .search-form__label-text {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.search-form__textfield {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 2.5px 14px;
+  padding-left: 0;
+  min-width: 225px;
+  color: white;
+  appearance: none;
+}
+
+.search-form__textfield:focus-visible {
+  outline: 1px solid white;
+  outline-offset: 1px;
+}
+
+.search-form__pseudo-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  border: 1px solid white;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: '';
+  position: absolute; 
+  width: 15px;
+  height: 15px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+} 
+
+.search-form__submit-button {
+  align-self: flex-end;
+  padding: 6px 73px;
+}
+
+.content__details {
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.title {
+  font-family: Oswald, sans-serif;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__details .title {
+  margin-bottom: 26px;
+}
+
+.content__list-container {
+  position: relative;
+  block-size: 298px;
+  inline-size: 390px;
+  overflow-y: scroll;
+  padding-left: 2px;
+}
+
+.content__list-item {
+  margin-bottom: 30px;
+  /* padding-left: 2px; */
+}
+
+.content__list-item *:focus-visible {
+  outline: none;
+}
+
+.content__list-item:has(:focus-visible) {
+  outline: 1px solid white;
+  outline-offset: -1px;
+}
+
+.content__list-item:hover {
+  text-decoration: underline;
+  text-underline-offset: 1px;
+}
+
+.content__list-item:active {
+  background-color: #545050;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: white;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+  max-height: 103px;
+}
+
+.content__video-card-title {
+  font-family: Oswald;
+  font-size: 30px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 195px; 
+  margin-top: -5px;
+}
+
+.content__video-card-description {
+  display: -webkit-box;
+  max-width: 195px; 
+  line-height: 16.2px;
+  padding-bottom: 1.8px;
+  margin-bottom: -1.8px; 
+  -webkit-line-clamp: 4; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content__video-card-thumbnail {
+  inline-size: 194px;
+  block-size: 103px;
+  object-fit: fill;
+  object-position: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.more-button {
+  width: 100%;
+  padding: 6px 0;
+}
+
 
 /* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
